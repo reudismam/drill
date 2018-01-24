@@ -105,9 +105,9 @@ public class TestStringFunctions extends ExecTest {
   @Test
   public void testCharLength(@Injectable final DrillbitContext bitContext,
                            @Injectable UserClientConnection connection) throws Throwable {
-    Object [] expected = new Object[] {new Long(8), new Long(0), new Long(5), new Long(5),
-                                       new Long(8), new Long(0), new Long(5), new Long(5),
-                                       new Long(8), new Long(0), new Long(5), new Long(5),};
+    Object [] expected = new Object[] {Long.valueOf(8), Long.valueOf(0), Long.valueOf(5), Long.valueOf(5),
+                                       Long.valueOf(8), Long.valueOf(0), Long.valueOf(5), Long.valueOf(5),
+                                       Long.valueOf(8), Long.valueOf(0), Long.valueOf(5), Long.valueOf(5),};
     runTest(bitContext, connection, expected, "functions/string/testCharLength.json");
   }
 
@@ -170,8 +170,8 @@ public class TestStringFunctions extends ExecTest {
   @Test
   public void testPosition(@Injectable final DrillbitContext bitContext,
                            @Injectable UserClientConnection connection) throws Throwable {
-    final Object [] expected = new Object[] {new Long(2), new Long(0), new Long(0), new Long(0),
-                                       new Long(2), new Long(0), new Long(0), new Long(0)};
+    final Object [] expected = new Object[] {Long.valueOf(2), Long.valueOf(0), Long.valueOf(0), Long.valueOf(0),
+                                       Long.valueOf(2), Long.valueOf(0), Long.valueOf(0), Long.valueOf(0)};
     runTest(bitContext, connection, expected, "functions/string/testPosition.json");
   }
 
